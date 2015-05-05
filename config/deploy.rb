@@ -2,17 +2,17 @@
 # lock '3.2.1'
 
 set :rvm_type, :system
-set :rvm_ruby_string, 'ruby-1.9.3-p484' # dor-services requires 1.9.3
+set :rvm_ruby_string, 'ruby-2.1.0' # dor-services requires 1.9.3
 
-set :application, 'myDemoWF'
-set :repo_url, 'https://github.com/sul-dlss/my-robot-suite.git'
+set :application, 'wasDisseminationWF'
+set :repo_url, 'https://github.com/sul-dlss/was-dissemination.git'
 set :branch, 'master'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/lyberadmin/my-robot-suite'
+set :deploy_to, '/home/lyberadmin/was-dissemination'
 
 # Default value for :scm is :git
 # set :scm, :git
