@@ -2,7 +2,7 @@
 # lock '3.2.1'
 
 set :rvm_type, :system
-set :rvm_ruby_string, 'ruby-2.1.0' # dor-services requires 1.9.3
+set :rvm_ruby_string, 'ruby-2.1.0'
 
 set :application, 'wasDisseminationWF'
 set :repo_url, 'https://github.com/sul-dlss/was-dissemination.git'
