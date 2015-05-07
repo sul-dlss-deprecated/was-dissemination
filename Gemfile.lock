@@ -176,7 +176,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    rack (1.6.0)
+    rack (1.6.1)
     rack-protection (1.5.3)
       rack
     rainbow (2.0.0)
@@ -289,7 +289,7 @@ DEPENDENCIES
   lyberteam-capistrano-devel (~> 3.0)
   pry (~> 0.10.0)
   rake (~> 10.3.2)
-  robot-controller (~> 1.0)
+  robot-controller
   rspec
   slop (~> 3.5.0)
   yard
