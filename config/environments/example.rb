@@ -1,20 +1,31 @@
+cert_dir = File.join(File.dirname(__FILE__), "..", "certs")
+
 Dor::Config.configure do
 
-  workflow.url 'https://example.com/workflow/'
+  workflow.url ''
+  solrizer.url ''
 
   robots do 
     workspace '/tmp'
   end
-  
-  demoConfig do
-    
+  ssl do
+    cert_file File.join(cert_dir,".crt")
+    key_file File.join(cert_dir,".key")
+    key_pass ''
   end
-
+  suri do
+    mint_ids true
+    id_namespace 'druid'
+    url ''
+    user ''
+    pass ''
+  end
   dor do
-    service_root 'https://USERNAME:PASSWORD@example.com/dor/v1'
+    service_root ''
   end
-   
+  fedora do
+    url ''
+  end
 end
 
-REDIS_URL = '127.0.0.1:6379/resque:development' # hostname:port[:db]/namespace
-# REDIS_TIMEOUT = '5' # seconds
+REDIS_URL ||= 'sul-lyberservices-test.stanford.edu:6379/resque:test'
