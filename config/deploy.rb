@@ -13,6 +13,7 @@ set :branch, 'master'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/home/lyberadmin/was-dissemination'
+set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -61,7 +62,7 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 10 do
       within release_path do
         # Uncomment  with the first deploy 
-        # execute :bundle, :install
+        execute :bundle, :install
          
         # Comment with the first deploy
         test :bundle, :exec, :controller, :stop
