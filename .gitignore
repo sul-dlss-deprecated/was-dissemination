@@ -1,0 +1,4 @@
+config/environments/development.rb
+config/environments/test.rb
+log/
+coverage/
