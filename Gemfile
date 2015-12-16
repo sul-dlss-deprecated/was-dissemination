@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'addressable'    
+gem 'addressable'
 gem 'dor-services', '~> 4.21.4'
 gem 'lyber-core'
 gem 'robot-controller', '~> 2.0.3'  # requires Resque
@@ -11,11 +11,11 @@ gem 'yard'
 gem 'rspec'
 
 group :development, :test do
-  if File.exists?(mygems = File.join(ENV['HOME'],'.gemfile'))
+  if File.exist?(mygems = File.join(ENV['HOME'],'.gemfile'))
     instance_eval(File.read(mygems))
   end
   gem 'awesome_print'
-	gem 'debugger', :platform => :ruby_19
+  gem 'debugger', :platform => :ruby_19
   gem 'holepicker', '~> 0.3', '>= 0.3.3'
   gem 'coveralls', require: false
 end

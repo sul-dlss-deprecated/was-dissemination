@@ -9,15 +9,15 @@ require 'yard/rake/yardoc_task'
 # Import external rake tasks
 Dir.glob('lib/tasks/*.rake').each { |r| import r }
 
-task :default => :ci  
+task :default => :ci
 
-desc "run continuous integration suite (tests, coverage, docs)" 
+desc 'run continuous integration suite (tests, coverage, docs)'
 task :ci => [:rspec, :doc]
 
-desc "Run RSpec with RCov"
+desc 'Run RSpec with RCov'
 RSpec::Core::RakeTask.new(:rspec) do |t|
     t.pattern = 'spec/**/*_spec.rb'
-    t.rspec_opts = ["-c", "-f progress", "--tty", "-r ./spec/spec_helper.rb"]
+    t.rspec_opts = ['-c', '-f progress', '--tty', '-r ./spec/spec_helper.rb']
 end
 
 desc 'Get application version'
@@ -40,8 +40,8 @@ begin
     yt.options = ['--output-dir', doc_dest_dir, '--readme', 'README.rdoc', '--title', 'WAS Registrar Documentation']
   end
 rescue LoadError
-  desc "Generate YARD Documentation"
+  desc 'Generate YARD Documentation'
   task :doc do
-    abort "Please install the YARD gem to generate rdoc."
+    abort 'Please install the YARD gem to generate rdoc.'
   end
-end  
+end

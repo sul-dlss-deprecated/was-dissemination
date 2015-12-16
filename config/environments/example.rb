@@ -1,16 +1,16 @@
-cert_dir = File.join(File.dirname(__FILE__), "..", "certs")
+cert_dir = File.join(File.dirname(__FILE__), '..', 'certs')
 
 Dor::Config.configure do
 
   workflow.url ''
   solrizer.url ''
 
-  robots do 
+  robots do
     workspace '/tmp'
   end
   ssl do
-    cert_file File.join(cert_dir,".crt")
-    key_file File.join(cert_dir,".key")
+    cert_file File.join(cert_dir,'.crt')
+    key_file File.join(cert_dir,'.key')
     key_pass ''
   end
   suri do

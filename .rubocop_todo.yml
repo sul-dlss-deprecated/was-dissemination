@@ -12,12 +12,6 @@ Lint/BlockAlignment:
   Exclude:
     - 'config/deploy.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/DeprecatedClassMethods:
-  Exclude:
-    - 'Gemfile'
-
 # Offense count: 2
 Lint/HandleExceptions:
   Exclude:
@@ -111,12 +105,6 @@ Style/IndentationWidth:
     - 'Rakefile'
     - 'config/deploy.rb'
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/LeadingCommentSpace:
-  Exclude:
-    - 'config/deploy.rb'
-
 # Offense count: 3
 # Cop supports --auto-correct.
 Style/MultilineIfThen:
@@ -175,47 +163,12 @@ Style/SpecialGlobalVars:
   Exclude:
     - 'config/boot.rb'
 
-# Offense count: 25
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/StringLiterals:
-  Enabled: false
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: IgnoredMethods.
 Style/SymbolProc:
   Exclude:
     - 'bin/run_robot'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/Tab:
-  Exclude:
-    - 'Gemfile'
-
-# Offense count: 7
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/TrailingBlankLines:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'config/environments/example.rb'
-    - 'config/environments/test.rb'
-    - 'config/schedule.rb'
-    - 'robots/robots.rb'
-    - 'robots/start_special_dissemination.rb'
-
-# Offense count: 10
-# Cop supports --auto-correct.
-Style/TrailingWhitespace:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'config/deploy.rb'
-    - 'config/environments/example.rb'
-    - 'config/environments/test.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
