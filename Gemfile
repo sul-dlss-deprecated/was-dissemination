@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'addressable'
-gem 'dor-services', '~> 4.21.4'
+gem 'dor-services', '~> 5.2'
 gem 'lyber-core'
 gem 'robot-controller', '~> 2.0.3'  # requires Resque
-gem 'pry', '~> 0.10.0'          # for bin/console
-gem 'slop', '~> 3.5.0'          # for bin/run_robot
+gem 'pry', '~> 0.10.0'              # for bin/console
+gem 'slop', '~> 3.5.0'              # for bin/run_robot
 gem 'rake'
 gem 'yard'
 gem 'rspec'
 
 group :development, :test do
-  if File.exist?(mygems = File.join(ENV['HOME'],'.gemfile'))
+  if File.exist?(mygems = File.join(ENV['HOME'], '.gemfile'))
     instance_eval(File.read(mygems))
   end
   gem 'awesome_print'
