@@ -1,9 +1,6 @@
 # config valid only for Capistrano 3.1
 # lock '3.2.1'
 
-set :rvm_type, :system
-set :rvm_ruby_string, 'ruby-2.1.0'
-
 set :application, 'wasDisseminationWF'
 set :repo_url, 'https://github.com/sul-dlss/was-dissemination.git'
 set :branch, 'master'
