@@ -3,6 +3,8 @@ cert_dir = File.join(File.dirname(__FILE__), '..', 'certs')
 Dor::Config.configure do
 
   workflow.url ''
+  workflow.logfile 'log/workflow_service.log'
+  workflow.shift_age 'weekly'
   solrizer.url ''
 
   robots do
