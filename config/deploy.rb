@@ -1,9 +1,5 @@
-# config valid only for Capistrano 3.1
-# lock '3.2.1'
-
 set :application, 'wasDisseminationWF'
 set :repo_url, 'https://github.com/sul-dlss/was-dissemination.git'
-set :branch, 'master'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -20,7 +16,6 @@ set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
 # Default value for :log_level is :debug
 # set :log_level, :debug
-set :log_level, :info
 
 # Default value for :pty is false
 # set :pty, true
@@ -42,36 +37,16 @@ set :default_stage, 'development'
 set :linked_dirs, %w(log run config/environments config/certs)
 
 namespace :deploy do
-  # This is a try to configure a clean install
-  # desc 'Start application'
-  # task :start do
-  #   invoke 'deploy'
-  #  on roles(:app), in: :sequence, wait: 10 do
-  #    within release_path do
-  #      execute :bundle, :install
-  #      execute :bundle, :exec, :controller, :boot
-  #    end
-  #  end
-  # end
-
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 10 do
       within release_path do
-        # Uncomment  with the first deploy
-        execute :bundle, :install
-
-        # Comment with the first deploy
         test :bundle, :exec, :controller, :stop
         test :bundle, :exec, :controller, :quit
-
-        # Always call the boot
         execute :bundle, :exec, :controller, :boot
-
       end
     end
   end
 
   after :publishing, :restart
-
  end

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'dor-services', '~> 5.5', '>= 5.5.0'
-gem 'lyber-core', '~> 4.0', '>= 4.0.2'
+gem 'dor-services', '~> 5.8', '>= 5.8.1'
+gem 'lyber-core', '~> 4.0', '>= 4.0.3'
 gem 'robot-controller', '~> 2.0.4'  # requires Resque
 gem 'pry', '~> 0.10.0'              # for bin/console
 gem 'slop', '~> 3.5.0'              # for bin/run_robot
@@ -22,5 +22,5 @@ end
 group :deployment do
   gem 'capistrano'
   gem 'capistrano-bundler'
-  gem 'lyberteam-capistrano-devel'
+  gem 'dlss-capistrano'
 end
