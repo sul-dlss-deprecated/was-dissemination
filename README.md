@@ -2,7 +2,7 @@
  
 # Was-Dissemination
 
-Routes items to the `wasSeedDisseminationWF` or `wasCrawlDisseminationWF`
+A robot suite that routes web archiving items to the `wasSeedDisseminationWF` or `wasCrawlDisseminationWF`. There is only a single step in this robot suite (`start-special-dissemination`). See https://github.com/sul-dlss/was-dissemination/blob/master/robots/start_special_dissemination.rb#L17-L25 for the route.
 
 # Documentation
 
