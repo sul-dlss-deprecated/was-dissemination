@@ -2,6 +2,7 @@
  
 # Was-Dissemination
 
+Routes items to the `wasSeedDisseminationWF` or `wasCrawlDisseminationWF`
 
 # Documentation
 
